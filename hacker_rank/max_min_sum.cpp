@@ -1,5 +1,8 @@
 // problem Question link is as following
 // https://www.hackerrank.com/challenges/mini-max-sum/problem
+#include <bits/stdc++.h>
+
+using namespace std;
 
 void miniMaxSum(vector<int> arr) {
     int max_n = 0;
