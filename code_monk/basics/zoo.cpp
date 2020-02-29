@@ -3,6 +3,8 @@
 
 #include<bits/stdc++.h>
 
+// solution is as following
+
 using namespace std;
 
 int main() {
