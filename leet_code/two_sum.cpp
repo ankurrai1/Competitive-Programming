@@ -24,10 +24,9 @@ public:
     }
 };
 
-
 // more optamized solution with complexity O(n) only
 
-#include <unordered_map> 
+#include <unordered_map>
 
 class Solution {
 public:
