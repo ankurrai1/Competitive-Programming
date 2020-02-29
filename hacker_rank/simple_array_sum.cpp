@@ -3,7 +3,6 @@
 using namespace std;
 
 vector<string> split_string(string);
-
 int simpleArraySum(vector<int> ar) {
     int sum = 0;
     for(int i =0; i<ar.size(); i++){
@@ -12,8 +11,9 @@ int simpleArraySum(vector<int> ar) {
     return sum;
 }
 
-int main()
-{
+
+int main(){
+  
     ofstream fout(getenv("OUTPUT_PATH"));
 
     int ar_count;
