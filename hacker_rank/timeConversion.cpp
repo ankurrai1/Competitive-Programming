@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 string timeConversion(string s) {
     string ext = s.substr(8,2);
     int hour = stoi(s.substr(0,2));
