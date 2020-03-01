@@ -28,7 +28,7 @@ string get_seat_type(int opp_seat_no){
 }
 
 int get_seat_no(int current_seat_no){
-    int disp[] = { 1, 3, 5, 7, 9, 11 }; 
+    int disp[] = { 1, 3, 5, 7, 9, 11 };
     int mod_res,index;
     mod_res = current_seat_no%12;
     if (mod_res == 0) return (current_seat_no-11);
@@ -37,4 +37,4 @@ int get_seat_no(int current_seat_no){
         return (current_seat_no-(disp[index]));
     }
     else return (current_seat_no+(disp[6-mod_res]));
-}
+};
