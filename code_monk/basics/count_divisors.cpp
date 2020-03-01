@@ -12,4 +12,4 @@ int main() {
  c = ((r -r%d)-(l-l%d))/d;
  if(l%d == 0) c++;
  cout << c;
-}
+};
