@@ -15,4 +15,4 @@ int main() {
 	}
 	cout << prod;
 	return 0;
-}
+};
