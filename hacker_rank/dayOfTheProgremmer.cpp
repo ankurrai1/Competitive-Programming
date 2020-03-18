@@ -4,7 +4,7 @@
 
 int getDate(int year){
     int date = 13;
-    if(year <= 1917 & year % 4 == 0){
+    if(year <= 1917 && year % 4 == 0){
         date = 12;
     }
     else if (year > 1918){
