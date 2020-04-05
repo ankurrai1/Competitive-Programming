@@ -33,8 +33,12 @@ int main()
 using namespace std;
 
 int main()
-{
+{   int a;
     string S, T;
+
+    cin >> a;
+    cin.ignore(256, '\n'); // remaining input characters up to the next newline character
+                       // are ignored
 
     getline(cin, S);
 
