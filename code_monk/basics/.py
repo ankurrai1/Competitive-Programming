@@ -21,7 +21,6 @@
 
 #input
 arr = list(map(int,input().split(" ")))
-
 #Method 1
 res = []
 num = 0
