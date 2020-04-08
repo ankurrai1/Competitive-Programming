@@ -21,7 +21,9 @@
 
 #input
 arr = list(map(int,input().split(" ")))
+
 #Method 1
+#========
 res = []
 num = 0
 for e in arr:
