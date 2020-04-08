@@ -45,4 +45,5 @@ carry = (arr[-1] + 1)//10
 for i in range(len(arr)-2, -1, -1):
     res2.append((arr[i] + carry)%10)
     carry = (arr[i] +carry)//10
+    
 print("solution method 2's ans :",res2[::-1])
