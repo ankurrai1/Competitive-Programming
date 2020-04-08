@@ -34,7 +34,8 @@ while num > 0:
 
 print("solution method 1's ans :",res[::-1])
 
-# Method 2 
+# Method 2
+# ========
 res2 = []
 carry = 0
 res2.append((arr[-1] + carry +1)%10)
