@@ -33,3 +33,13 @@ while num > 0:
     num = num // 10
 
 print("solution method 1's ans :",res[::-1])
+
+# Method 2 
+res2 = []
+carry = 0
+res2.append((arr[-1] + carry +1)%10)
+carry = (arr[-1] + 1)//10
+for i in range(len(arr)-2, -1, -1):
+    res2.append((arr[i] + carry)%10)
+    carry = (arr[i] +carry)//10
+print("solution method 2's ans :",res2[::-1])
