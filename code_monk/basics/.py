@@ -17,3 +17,20 @@
 # it should return [1, 0, 0, 0]
 #
 # problem statement is as above
+
+
+#input
+arr = list(map(int,input().split(" ")))
+
+#Method 1
+res = []
+num = 0
+for e in arr:
+    num = num*10+e
+num += 1
+
+while num > 0:
+    res.append(num%10)
+    num = num // 10
+
+print("solution method 1's ans :",res[::-1])
