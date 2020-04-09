@@ -10,14 +10,14 @@ int main(){
   cin >> n;
   if(n%2 == 0) i = 0;
   else{
-    for(i = 3; i < n/2; i+=2){
+    for(i = 3; i*i < n; i++){
       if(n%i == 0){
         isPrime = false;
         break;
       }
     }
   }
-  if(i >= n/2) cout << "No is a Prime .";
+  if(i*i >= n) cout << "No is a Prime .";
   else cout << "not prime No.";
   return 0;
 }
