@@ -7,9 +7,8 @@ using namespace std;
 
 int main(){
   int i,n;
-  bool isPrime = true;
   cin >> n;
-  if(n%2 == 0) isPrime = false;
+  if(n%2 == 0) i = 0;
   else{
     for(i = 3; i < n/2; i+=2){
       if(n%i == 0){
@@ -18,7 +17,7 @@ int main(){
       }
     }
   }
-  if(isPrime) cout << "No is a Prime .";
+  if(i == n) cout << "No is a Prime .";
   else cout << "not prime No.";
   return 0;
 }
