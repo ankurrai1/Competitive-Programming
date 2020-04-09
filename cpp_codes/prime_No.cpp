@@ -17,7 +17,7 @@ int main(){
       }
     }
   }
-  if(i == n) cout << "No is a Prime .";
+  if(i >= n/2) cout << "No is a Prime .";
   else cout << "not prime No.";
   return 0;
 }
