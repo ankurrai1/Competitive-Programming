@@ -35,6 +35,19 @@ void pascalTringle(int n){
 
 }
 
+// Optamized version of code
+
+int pascalTringle(){
+  for(int i = 1; i <= n; i++){
+    int c = 1;
+    for(int j = 1; j <= i; j++){
+      cout << c << " ";
+      c = c * (i-j)/j;
+    }
+    cout << "\n";
+  }
+}
+
 int main(){
   int n;
   cin >> n;
