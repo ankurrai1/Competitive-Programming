@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 int get_deletion_c(string,string);
 
 int main() {
