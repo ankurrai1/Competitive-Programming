@@ -6,6 +6,7 @@
 // solution function implimented here
 
 #include <bits/stdc++.h>
+
 using namespace std;
 
 int get_sum(int);
