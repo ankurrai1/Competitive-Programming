@@ -16,7 +16,7 @@ int main() {
         for(int i = 0; i < s.length(); i++){
             if(s[i] == 'A'|| s[i] == 'D'|| s[i]=='O'||s[i] == 'P'|| s[i]=='Q'||       // these are text has only one hole
             s[i]=='R') holes++;
-            else if(s[i] == 'B') holes += 2;
+            else if(s[i] == 'B') holes += 2; // B is only alphabet with 2 holes
         }
         cout << holes <<"\n";
     }
