@@ -3,3 +3,5 @@
 // problem statement link is as following
 
 //https://www.hackerrank.com/challenges/kangaroo/problem\
+
+// solution function is as following
