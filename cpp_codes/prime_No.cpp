@@ -8,16 +8,15 @@ using namespace std;
 int main(){
   int i,n;
   cin >> n;
-  if(n%2 == 0) i = 0;
+  if (n % 2 == 0) i = 0;
   else{
-    for(i = 3; i*i < n; i++){
+    for(i = 2; i*i <= n; i++){
       if(n%i == 0){
-        isPrime = false;
         break;
       }
     }
   }
-  if(i*i >= n) cout << "No is a Prime .";
+  if(i*i > n) cout << "No is a Prime .";
   else cout << "not prime No.";
   return 0;
 }
