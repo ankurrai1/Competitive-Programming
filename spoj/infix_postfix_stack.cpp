@@ -6,37 +6,38 @@
 using namespace std;
 #define SPEED ios::sync_with_stdio(false); cin.tie(0); cout.tie(0)
 
-int pref[5] = {'^','/','*','+','-'};
-
-
-string get_postfix(string in){
-  unordered_map<char, int> pref;
-  pref['^'] = 5;
-  pref['/'] = 4;
-  pref['*'] = 3;
-  pref['+'] = 2;
-  pref['-'] = 1;
-
-  stack<char> s;
-
-  string postfix = "";
-
-  for (int i = 0; i < in.size(); i++){
-
-    if(pref[in[i]] || in[i] == '(' || in[i] == ')'){
-        while(!s.empty() && pref[s.top()] >= pref[in[i]]){
-            postfix += s.top();
-            s.pop();
+string get_postfix(string s){
+    unordered_map<char, int> pref;
+    pref['^'] = 5;
+    pref['/'] = 4;
+    pref['*'] = 3;
+    pref['+'] = 2;
+    pref['-'] = 1;
+    stack<char> st;
+    string final = "";
+    for(auto e : s){
+        if(e == '(') st.push(e);
+        else if(!st.empty() && e == ')'){
+            while( st.top() != '('){
+                final += st.top();
+                st.pop();
+            }
+            st.pop();
         }
-        s.push(in[i]);
+        else if(pref[e]){
+            while(!st.empty() && pref[st.top()] >= pref[e]){
+                final += st.top();
+                st.pop();
+            }
+            st.push(e);
+        }
+        else final += e;
     }
-    else postfix += in[i];
-  }
-  while (!s.empty()){
-    postfix += s.top();
-    s.pop();
-  }
-  return postfix;
+    while (!st.empty()){
+        final += st.top();
+        st.pop();
+    }
+    return final;
 }
 
 int main(){
