@@ -7,6 +7,7 @@ int main()
     // added the two lines below
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+    cout.tie(NULL);
     // code goes here as regular
     cin >> n >> k;
     cout << (n+k) << "\n";
