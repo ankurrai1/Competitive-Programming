@@ -18,7 +18,6 @@
 #
 # problem statement is as above
 
-
 #input
 arr = list(map(int,input().split(" ")))
 
