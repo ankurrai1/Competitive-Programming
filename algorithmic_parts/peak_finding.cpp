@@ -22,7 +22,6 @@ int main(){
   return 0;
 }
 
-
 // here the complexity of the following function is O(logn) and the complexity T(n) = T(n/2) + O(1)
 
 int get_peak(int arr[],int start, int end, int n){
