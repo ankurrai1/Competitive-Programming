@@ -14,7 +14,7 @@ int maxLen(int arr[], int n){
     dataSet[0] = -1;
     for(int i = 0; i < n; i++){
         sum = sum + arr[i];
-        if(dataSet[sum]){
+        if(dataSet.find(sum) != dataSet.end()){
             res = max(res, i - dataSet[sum]);
         }
         else
