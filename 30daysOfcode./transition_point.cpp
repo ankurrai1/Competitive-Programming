@@ -7,6 +7,7 @@
 
 
 // Solution Function to find the transition point
+
 int searchfirst1(int arr[],int s,int e){
     if(s == e && arr[s] == 1) return s;
     if(s < e){
