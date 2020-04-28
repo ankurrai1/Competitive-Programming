@@ -4,3 +4,20 @@
 // Note that, if there is no "1" exists, print -1.
 
 // complexity will be O(log n)
+
+
+// Solution Function to find the transition point
+int searchfirst1(int arr[],int s,int e){
+    if(s == e && arr[s] == 1) return s;
+    if(s < e){
+      int mid =(s+e-1)/2;
+      if(arr[mid] == 1 && arr[mid-1] == 0) return mid;
+      if(arr[mid] == 0 ) return searchfirst1(arr,mid+1,e);
+      else return searchfirst1(arr,s,mid-1);
+    }
+    return -1;
+}
+
+int transitionPoint(int arr[], int n) {
+    return searchfirst1(arr, 0, n-1);
+}
