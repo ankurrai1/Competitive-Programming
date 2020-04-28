@@ -7,7 +7,6 @@
 // here main task is to solve the problem in reduced form
 // complexity will be O(log n)
 
-
 // Solution Function to find the transition point
 
 int searchfirst1(int arr[],int s,int e){
