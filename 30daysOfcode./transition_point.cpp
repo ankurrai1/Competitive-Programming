@@ -4,6 +4,7 @@
 // Note that, if there is no "1" exists, print -1.
 
 // its verry easy to solve this problem with complexity O(n);
+// here main task is to solve the problem in reduced form
 // complexity will be O(log n)
 
 
