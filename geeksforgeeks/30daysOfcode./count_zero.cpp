@@ -6,3 +6,31 @@
 // complexity will be O(log n)
 
 // Solution is implementated as following
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int get_first_zero(int arr[], int start,int end){
+    if (start == end && arr[start] == 1) return end+1;
+    if(start < end){
+        int mid = (start + end -1) / 2;
+        if(arr[mid] == 1 && arr[mid+1] == 0) return mid+1;
+        if(arr[mid] == 1 && arr[mid +1] == 1) return get_first_zero(arr,mid+1,end);
+        return get_first_zero(arr,start, mid -1);
+    }
+    else return 0;
+}
+
+int main() {
+    int n, i, t;
+    cin >> t;
+    while(t--){
+        cin >> n;
+        int arr[n];
+        for(i = 0; i < n; i++){
+            cin >> arr[i];
+        }
+        cout<< (n-get_first_zero(arr,0,n-1))<<"\n";
+    }
+	return 0;
+}
