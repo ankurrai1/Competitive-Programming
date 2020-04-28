@@ -3,6 +3,7 @@
 //You are given a sorted array containing only numbers 0 and 1. Find the transition point efficiently. Transition point is a point where "0" ends and "1" begins.
 // Note that, if there is no "1" exists, print -1.
 
+// its verry easy to solve this problem with complexity O(n);
 // complexity will be O(log n)
 
 
