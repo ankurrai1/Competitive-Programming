@@ -1,5 +1,5 @@
 ### Building Base For CC
 ----
-> some basic stuff for starting competitive Programming
+> some stuff for starting competitive Programming to upper level.
 
-> in this repo a collection of problem of getting started level to jump start in competitive Coding world 
+> in this repo a collection of problem of getting started level to jump start in competitive Coding world
