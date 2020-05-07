@@ -20,3 +20,24 @@ public:
         return max_e;
     }
 };
+
+
+// A Better approch to solve  same problem:
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int majority = nums[0], frequency = 1;
+        for(int a : nums){
+            if(a!=majority){
+                frequency--;
+            }
+            else frequency++;
+            if(frequency == 0){
+                majority = a;
+                frequency = 1;
+            }
+        }
+        return majority;
+    }
+};
