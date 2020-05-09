@@ -5,8 +5,6 @@
 
 // solution function is as following
 
-#include <bits/stdc++.h>
-using namespace std;
 
 void fill_with_res(unsigned long long int* a, int n){
     unsigned long long int num;
