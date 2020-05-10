@@ -10,3 +10,32 @@
 
 
 // solution function is implemented here:
+
+class Solution {
+
+    int findDepthAndParent(TreeNode* root, int &parent, int value, int depth){
+        if(!root) return false;
+        if(root->val == value) return depth;
+        parent = root-> val;
+        int l = findDepthAndParent(root->left,parent,value,depth+1);
+        if(l) return l;
+        parent = root-> val;
+        int r = findDepthAndParent(root->right,parent,value,depth+1);
+        return r;
+    }
+public:
+    bool isCousins(TreeNode* root, int x, int y) {
+        if(root->val == x || root->val == y) return false;
+        int xParent, yParent, xDepth, yDepth;
+
+        xParent = -1;
+        xDepth = findDepthAndParent(root,xParent,x,0);
+
+        yParent = -1;
+        yDepth = findDepthAndParent(root,yParent,y,0);
+
+        if(xDepth == yDepth && xParent != yParent)
+            return true;
+        return false;
+    }
+};
