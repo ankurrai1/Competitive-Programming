@@ -16,3 +16,26 @@ public:
         return false;
     }
 };
+
+
+// the above solution is of complexity O(root(n)) but not optimal.
+// optimal solution is is following with time complexity of O( log( root(n) ) )
+
+
+class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        long int max = 100000, low = 1, mid, square;
+        while(low <= max){
+            mid = low + (max - low)/2;
+            if (mid * mid == num) return true;
+            else if (mid*mid > num ) {
+                max = mid-1;
+            }
+            else{
+                low = mid + 1;
+            }
+        }
+        return false;
+    }
+};
