@@ -15,7 +15,8 @@ int findpeak(int i, int j){
     if(i < n-1 && arr[i+1][j] > arr[i][j]) return findpeak(i+1,j); // checking after row elements is grater or not
     if(j > 0 && arr[i][j-1] > arr[i][j]) return findpeak(i,j-1); // checking previous column elements is grater or not
     if(j < m-1 && arr[i][j+1] > arr[i][j]) return findpeak(i,j+1); // checking after column elements is grater or not
-    else return arr[i][j];
+    else return arr[i][j]; // if no of above condition is true it means current element is greater than all its neighbors.
+    // thus it is the peak of matrix.
 }
 
 
