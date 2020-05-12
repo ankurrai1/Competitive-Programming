@@ -11,7 +11,7 @@ int arr[][4] = { { 10, 8, 10, 10 },
 
 
 int findpeak(int i, int j){
-    if(i > 0 && arr[i-1][j] > arr[i][j]) return findpeak(i-1,j);
+    if(i > 0 && arr[i-1][j] > arr[i][j]) return findpeak(i-1,j); // checking previous row elements is grater or not
     if(i < n-1 && arr[i+1][j] > arr[i][j]) return findpeak(i+1,j);
     if(j > 0 && arr[i][j-1] > arr[i][j]) return findpeak(i,j-1);
     if(j < m-1 && arr[i][j+1] > arr[i][j]) return findpeak(i,j+1);
