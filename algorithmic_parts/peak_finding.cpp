@@ -13,6 +13,8 @@ int get_peak(vector<int>);
 // surely we can do that in O(n) time complexity but we need to achieve better than that here
 // our goal is that we
 
+
+// this in the case of sorted arrays
 int get_peak(int arr[],int start,int end, int n);
 
 int main(){
