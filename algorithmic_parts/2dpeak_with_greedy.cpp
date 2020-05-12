@@ -8,6 +8,8 @@ int arr[][4] = { { 10, 8, 10, 10 },
                  { 15, 9, 11, 21 },
                  { 16, 17, 19,20 }
                 };
+
+
 int findpeak(int i, int j){
     if(i > 0 && arr[i-1][j] > arr[i][j]) return findpeak(i-1,j);
     if(i < n-1 && arr[i+1][j] > arr[i][j]) return findpeak(i+1,j);
