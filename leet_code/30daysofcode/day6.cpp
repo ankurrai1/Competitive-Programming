@@ -21,7 +21,6 @@ public:
     }
 };
 
-
 // A Better approch to solve  same problem:
 
 class Solution {
