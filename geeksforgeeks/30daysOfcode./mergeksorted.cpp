@@ -49,3 +49,37 @@ int *mergeKArrays(int arr[][N], int k)
     }
     return ar;
 }
+
+
+
+// A Better solution approch to solve this problem in time complexity of O(n lon k);
+
+
+typedef pair<int,pair<int,int>>pq;
+int *mergeKArrays(int arr[][N], int k)
+{
+     int *res=new int[k*k];
+     priority_queue<pq,vector<pq>,greater<pq>>q;
+      for(int i=0;i<k;i++)
+      {
+          q.push(make_pair(arr[i][0],make_pair(i,0)));
+      }
+      int j=0;
+     while(!q.empty())
+     {
+
+        pq curr=q.top();
+         q.pop();
+         res[j++]=curr.first;
+         int iarr=curr.second.first;
+         int iele=curr.second.second;
+         if(iele<k-1)
+         {
+             q.push(make_pair(arr[iarr][iele+1], make_pair(iarr,iele+1) ));
+
+         }
+
+
+     }
+     return res;
+}
