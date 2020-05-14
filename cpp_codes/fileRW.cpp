@@ -1,8 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-using namespace std;
-
+# include "herader.hpp" // This file has all nessesary pre processors of this file
 
 /*----------------------------------------------------------------
 - Include the <fstream> library
