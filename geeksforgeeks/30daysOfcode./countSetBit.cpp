@@ -6,6 +6,7 @@
 #include <iostream>
 using namespace std;
 
+// Nives approch to solve
 
 unsigned int get_count(unsigned int n){
     unsigned int count = 0;
@@ -16,12 +17,27 @@ unsigned int get_count(unsigned int n){
     return count;
 }
 
-// receive approch to solve
+// recursive approch to solve
 
 unsigned int get_count(unsigned int n){
   if(n == 0) return 0;
   return (n & 1) + get_count(n >> 1);
 }
+
+
+// Brain Karnighan's algorithm approch to solve
+
+unsigned int countSetBits(int n)
+{
+    unsigned int count = 0;
+    while (n) {
+        n &= (n - 1);
+        count++;
+    }
+    return count;
+}
+
+
 
 int main() {
     int t;
