@@ -17,3 +17,33 @@ int main ()
   std::cout << fib(n) << std::endl;
   return 0;
 }
+
+
+
+// another solution is it is needed to more then 100 time we can store data in memory as following
+
+#include <iostream>
+#define ll unsigned int
+using namespace std;
+
+void set_fibo(ll arr[],ll n){
+    arr[0] = 0;
+    arr[1] = 1;
+    for(int i = 2; i < n; i++){
+        arr[i] = (arr[i-2] + arr[i-1]) % 1000000007;
+    }
+}
+
+int main() {
+    int t;
+    ll arr[1001];
+    set_fibo(arr, 1001);
+    cin >> t;
+    while(t--){
+        ll ele;
+        cin >> ele;
+        cout << arr[ele] << "\n";
+
+    }
+	return 0;
+}
