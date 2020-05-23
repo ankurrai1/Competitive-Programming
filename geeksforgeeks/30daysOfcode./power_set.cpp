@@ -19,6 +19,8 @@ using namespace std;
 // 110 counter == 6
 // 111 counter == 7
 
+// complexity  of above is O(n*2^n) ;
+
 void print_sub_set(string s, int n){
     vector<string> subs;
 
