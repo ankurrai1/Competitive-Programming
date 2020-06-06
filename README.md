@@ -11,3 +11,5 @@
 > * In this repo some cpp codes are also added which helps to solve problems in competitive coding.
 
 > * In this repo a collection of problem of getting started level to jump start in competitive Coding world
+
+> Closing this and will start  Topic wise with DS and ALGO repository.
