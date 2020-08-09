@@ -6,7 +6,7 @@ unsigned long getMissing(unsigned long, unsigned long);
 int main(){
   unsigned long n, xr = 0;
   cin >> n;
-  for (unsigned long i = 0; i < n; ++i){
+  for (unsigned long i = 0; i < n -1; ++i){
     int no;
     cin >> no;
     xr ^= no;
