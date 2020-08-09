@@ -20,6 +20,6 @@ int main(){
     last = str[i];
   }
 
-  cout << mx << "\n";
+  cout << max(mx, cmax) << "\n";
   return 0;
 }
