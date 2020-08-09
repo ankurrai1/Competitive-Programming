@@ -76,6 +76,5 @@ int main() {
     SPEED;
     cout.precision(8);
     cout << fixed;
-
     return 0;
 }
