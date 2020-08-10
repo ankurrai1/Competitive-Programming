@@ -4,13 +4,20 @@ using namespace std;
 
 
 int main(){
-  unsigned long n, ele;
-  unordered_map <unsigned long, int> hash;
+  unsigned long n, ele, res = 0;
+  unordered_set <unsigned long> s;
   cin >> n;
-  while(n--){
+  unsigned long arr[n];
+  for(int i = 0; i < n; i++){
     cin >> ele;
-    hash[ele]++;
+    arr[i] = ele;
   }
-  cout << hash.size() << "\n";
+  for(int i = 0; i < n; i++){
+    if (s.find(arr[i]) == s.end()) {
+      s.insert(arr[i])
+      res++;
+    }
+  }
+  cout << res << "\n";
   return 0;
 }
