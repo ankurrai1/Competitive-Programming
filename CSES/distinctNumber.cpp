@@ -5,10 +5,10 @@ using namespace std;
 
 int main(){
   int n;
-  unsigned long ele, res = 0;
-  unordered_set <unsigned long> s;
+  unsigned long long int ele, res = 0;
+  unordered_set <unsigned long long int> s;
   cin >> n;
-  unsigned long arr[n];
+  unsigned long long int arr[n];
   for(int i = 0; i < n; i++){
     cin >> ele;
     arr[i] = ele;
