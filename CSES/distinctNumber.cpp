@@ -4,7 +4,8 @@ using namespace std;
 
 
 int main(){
-  unsigned long n, ele, res = 0;
+  int n;
+  unsigned long ele, res = 0;
   unordered_set <unsigned long> s;
   cin >> n;
   unsigned long arr[n];
@@ -14,7 +15,7 @@ int main(){
   }
   for(int i = 0; i < n; i++){
     if (s.find(arr[i]) == s.end()) {
-      s.insert(arr[i])
+      s.insert(arr[i]);
       res++;
     }
   }
