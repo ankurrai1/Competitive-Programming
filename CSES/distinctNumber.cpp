@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 int main(){
   unsigned long n, ele;
   unordered_map <unsigned long, int> hash;
