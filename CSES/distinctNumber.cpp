@@ -17,7 +17,7 @@ int main(){
   last = 1;
   res++;
 
-  for(long int i = 0; i < n; i++){
+  for(long int i = 1; i < n; i++){
     if(arr[i] != last){
       res++;
       last = arr[i];
