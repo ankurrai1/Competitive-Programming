@@ -5,6 +5,9 @@ using namespace std;
 int main(){
   int n, j = 0;
   cin >> n;
+  if(n <= 3){
+    cout << "NO SOLUTION" << "\n";
+  }
   int arr[n+1];
 
   for(int i = 1; i <=n; i += 2, j++){
