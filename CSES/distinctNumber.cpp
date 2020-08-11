@@ -5,8 +5,7 @@ using namespace std;
 
 int main(){
   long int n;
-  long int ele, res = 0;
-  unordered_set <long int> s;
+  long int ele, res = 0, last;
   cin >> n;
 
   long int arr[n];
@@ -14,11 +13,14 @@ int main(){
     cin >> ele;
     arr[i] = ele;
   }
+  sort(arr, arr + n);
+  last = 1;
+  res++;
 
-  for(int i = 0; i < n; i++){
-    if(s.find(arr[i]) == s.end()) {
-      s.insert(arr[i]);
+  for(long int i = 0; i < n; i++){
+    if(arr[i] != last){
       res++;
+      last = arr[i];
     }
   }
   cout << res << "\n";
