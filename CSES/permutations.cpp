@@ -5,16 +5,18 @@ using namespace std;
 int main(){
   int n, j = 0;
   cin >> n;
-  if(n <= 3){
+  if(n == 3 || n == 2){
     cout << "NO SOLUTION" << "\n";
+    return 0;
   }
-  int arr[n+1];
 
-  for(int i = 1; i <=n; i += 2, j++){
+  int arr[n];
+
+  for(int i = 2; i <= n; i += 2, j++){
     arr[j] = i;
   }
 
-  for(int i = 2; i <=n; i += 2, j++){
+  for(int i = 1; i <=n; i += 2, j++){
     arr[j] = i;
   }
 
