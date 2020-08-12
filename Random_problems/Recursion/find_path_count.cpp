@@ -48,9 +48,6 @@ int main(){
   return 0;
 }
 
-
-// dp solution of problem
-
 void get_path_count(int m, int n){
     // dp matrix
   long long int mem[n][m]={0};
