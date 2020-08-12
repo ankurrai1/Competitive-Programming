@@ -23,11 +23,6 @@ int get_path_count(int m, int n){
   else return get_path_count(m -1, n) + get_path_count(m, n -1);
 }
 
-
-
-
-
-
 //===================================================================================================================
 
 // DP SOLUTION
