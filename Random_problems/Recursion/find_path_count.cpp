@@ -30,6 +30,8 @@ int get_path_count(int m, int n){
 
 //===================================================================================================================
 
+// DP SOLUTION
+
 #include <bits/stdc++.h>
 
 using namespace std;
