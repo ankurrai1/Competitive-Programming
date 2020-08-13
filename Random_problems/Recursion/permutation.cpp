@@ -33,9 +33,7 @@ void generateAllPermutation(vector<int> arr, int i, int n){
         return;
     }
     for(int j = i; j < n; j++){
-        int temp = arr[j];
-        arr[j] = arr[i];
-        arr[i] = temp;
+      swap(arr, i, j);
         generateAllPermutation(arr, i+1, n);
         temp = arr[j];
         arr[j] = arr[i];
