@@ -21,6 +21,12 @@ int main(){
   return 0;
 }
 
+void swap(vector<int> &arr, int i, int j){
+  int tmp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = tmp;
+}
+
 void generateAllPermutation(vector<int> arr, int i, int n){
     if(i == n - 1){
         res.push_back(arr);
