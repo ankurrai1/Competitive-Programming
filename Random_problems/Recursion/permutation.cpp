@@ -2,12 +2,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// global vector to hold instant change
 vector<vector<int>> res;
 
 void generateAllPermutation(vector<int>, int, int);
 
 int main(){
-  
+
   int n = 4;
   vector<int> curr, arr = {1,2,3,4};
 
