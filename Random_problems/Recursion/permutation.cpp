@@ -12,6 +12,7 @@ int main(){
 
   generateAllPermutation(arr, 0, n);
 
+  // for printing matrix
   for(auto a : res){
     for(auto ele : a){
       cout << ele << " ";
