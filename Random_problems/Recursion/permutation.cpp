@@ -7,8 +7,9 @@ vector<vector<int>> res;
 void generateAllPermutation(vector<int>, int, int);
 
 int main(){
+  
   int n = 4;
-  vector<int> curr, arr = {1,2,3, 4};
+  vector<int> curr, arr = {1,2,3,4};
 
   generateAllPermutation(arr, 0, n);
 
