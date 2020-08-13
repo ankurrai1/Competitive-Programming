@@ -36,6 +36,7 @@ void generateAllPermutation(vector<int> arr, int i, int n){
       // swaping i with j and creating new permutation
       swap(arr, i, j);
       generateAllPermutation(arr, i+1, n);
+      // swaping i with j and for normalizing
       swap(arr, i, j);
     }
 }
