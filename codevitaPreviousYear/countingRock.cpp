@@ -2,6 +2,14 @@
 
 using namespace std;
 
+int getEleCount(int arr[], int left, int right){
+  int count = 0;
+  for(int i = 0; i < n; i++){
+    if((arr[i] >= left) && (arr[i] <= right)) count++;
+  }
+  return count;
+}
+
 int main(){
   int n , r;
   unordered_map<int, int> range;
