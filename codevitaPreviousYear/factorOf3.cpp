@@ -21,15 +21,12 @@ int main() {
         for(int i = 0; i < n; i++){
             arr2[i] = arr[i] % 3;
         }
-
         int a = 0, b = 0, c = 0;
-
         for(int i = 0; i < n; i++){
             if(arr2[i] == 0) a++;
             if(arr2[i] == 1) b++;
             if(arr2[i] == 2) c++;
         }
-
         if(a == 0 && b != 0 && c != 0)
         cout << "No";
         else if(a == 0 && b == 0 && c != 0)
