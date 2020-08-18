@@ -26,6 +26,5 @@ int main(){
   for(auto e : range){
     cout << getEleCount(arr, e.first, e.second) << " ";
   }
-
   return 0;
 }
