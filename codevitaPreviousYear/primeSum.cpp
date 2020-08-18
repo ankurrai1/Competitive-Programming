@@ -11,7 +11,6 @@ int getEleCount(int arr[], int left, int right){
 }
 
 int main(){
-
   int n , r;
   unordered_map<int, int> range;
   cin >> n >> r;
