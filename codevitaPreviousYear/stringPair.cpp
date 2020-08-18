@@ -16,7 +16,6 @@ int countPair(int arr[], int n, int d){
     }
     return count;
 }
-
 unordered_map <int, string>  fillHash(){
 
     unordered_map <int, string> hash;
