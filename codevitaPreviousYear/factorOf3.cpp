@@ -32,7 +32,6 @@ int main() {
         else if( a <= (b + c + 1))
         cout << "Yes";
         else cout << "No";
-
     }
 
 	return 0;
