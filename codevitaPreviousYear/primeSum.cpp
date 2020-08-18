@@ -11,7 +11,7 @@ int getEleCount(int arr[], int left, int right){
 }
 
 int main(){
-  
+
   int n , r;
   unordered_map<int, int> range;
   cin >> n >> r;
@@ -27,5 +27,6 @@ int main(){
   for(auto e : range){
     cout << getEleCount(arr, e.first, e.second) << " ";
   }
+  
   return 0;
 }
