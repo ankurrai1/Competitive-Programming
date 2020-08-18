@@ -2,7 +2,6 @@
 using namespace std;
 
 int ones[21] = {2,2,1,2,2,2,1,2,2,2,1,3,2,3,4,3,3,4,4,4,1};
-
 unordered_map <int , int> tens;
 
 unordered_map <int, string> hash;
@@ -16,6 +15,7 @@ int countPair(int arr[], int n, int d){
     }
     return count;
 }
+
 unordered_map <int, string>  fillHash(){
 
     unordered_map <int, string> hash;
