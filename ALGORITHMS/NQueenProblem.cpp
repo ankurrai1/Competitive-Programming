@@ -21,6 +21,9 @@ int main(){
     return 0;
   }
 
-    
+  // creation square board of give size;
+  int board[BoardSize][BoardSize] = {0};
+
+  solveNQueenProblem(board, 0, BoardSize)  // main problem solving function
 
 }
