@@ -2,42 +2,31 @@
 
 using namespace std;
 
-// boolean arrays which consume less size then original boolean array and cont start form right side
-// only n bits where boolean is itself 1 byte which makes it N * 1byte
-// let board will be of 1000 max;
+#define ll long long
 
-bitset<1000> column, digonal1, digonal2;
 
-bool isSafePlace(int i, int j){
-  //                                          because we can't store -ve index
-  return ( !column[j] && !digonal1[i + j] && !digonal2[i - j + n -1 ])
+ll solveNKnightProblem(ll n){
+  ll total  = n * n *(n * n - 1); // total possible position if knights are of same teams;
+  ll case1 = 4 * 2 ;// all corners
+  ll case2 = 8 * 3; // all corners + 1
+  ll case3 = (n - 4) * 4  * 4;  // (other then all corners) *  (atttack place) * (no of sides)
+  ll case4 = 4 * 4; // (1, 1 like posintion invalid) * (no of 1,1 like posintion)
+  ll case5 = (n - 4) * 6 * 4; // (second line posintion) *  (atttack place) * (no of sides)
+  ll case6 = (n - 4)*(n - 4) * 8;  // all central part * (atttack place)
+  ll div = 2 ;  // Because every place is counted 2 times
+
+  return (total - (case1 + case2 + case3 + case4 + case5 + case6)) / div;
 }
-
-void solveNQueenProblem(int i, int n, int &count){
-  if(i == n){
-    count++;
-    return ;
-  }
-  for(int j = 0; j < n; j++){
-    if(isSafePlace(i, j)){
-      // set every place not avaliable for next row
-      column[j] = digonal1[i + j] = digonal2[i - j + n - 1] = 1;
-      solveNQueenProblem(i+1, n, count) // check for next row
-
-      // if reached to following line it means that place is not appropriate
-      column[j] = digonal1[i + j] = digonal2[i - j + n - 1] = 0;  // Backtracking
-    }
-  }
-}
-
 int main(){
+  // in this problem no of queen is fixed upto two;
+  // n will be no form o to 1000 max;
 
-  // no of queens;
-  int n;
+  // we have to find no of ways in which 2 knights can be placed for each n starting form 0 to n
+  ll n;
   cin >> n;
-  int count = 0;
-  solveNQueenProblem(start = 0,n, count = 0);
-
-  cout << count << "\n";
+  for(ll i = 1; i <= n; i++)
+  {
+    cout << solveNKnightProblem(i) << "\n";
+  }
   return 0;
 }

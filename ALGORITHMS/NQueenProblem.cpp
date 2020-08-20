@@ -57,7 +57,7 @@ bool solveNQueenProblem(int board[][BoardSize], int i, int n){
 
     // for printing all possible queens arrangement in the board
     cout << "\n\n";
-    return falsse
+    return false;
   }
 
   for(int j = 0; j < n; j++){
