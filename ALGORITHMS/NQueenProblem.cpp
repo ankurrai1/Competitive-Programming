@@ -51,7 +51,13 @@ bool solveNQueenProblem(int board[][BoardSize], int i, int n){
   if(i == n){
     // reached end of of our board and all Queen's are already placed
     printBoard(board, n);
-    return true;
+
+    // for first configuration;
+    // return true;
+
+    // for printing all possible queens arrangement in the board
+    cout << "\n\n";
+    return falsse
   }
 
   for(int j = 0; j < n; j++){
