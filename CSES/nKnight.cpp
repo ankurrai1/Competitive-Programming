@@ -8,9 +8,9 @@ using namespace std;
 
 bitset<1000> column, digonal1, digonal2;
 
-bool isSafePlace(int i, int j, int n){
+bool isSafePlace(int i, int j){
   //                                          because we can't store -ve index
-  return ( !column[j] && !digonal1[i + j] && !digonal2[i - j + n -1 ]);
+  return ( !column[j] && !digonal1[i + j] && !digonal2[i - j + n -1 ])
 }
 
 void solveNQueenProblem(int i, int n, int &count){
@@ -19,10 +19,10 @@ void solveNQueenProblem(int i, int n, int &count){
     return ;
   }
   for(int j = 0; j < n; j++){
-    if(isSafePlace(i, j, n)){
+    if(isSafePlace(i, j)){
       // set every place not avaliable for next row
       column[j] = digonal1[i + j] = digonal2[i - j + n - 1] = 1;
-      solveNQueenProblem(i+1, n, count); // check for next row
+      solveNQueenProblem(i+1, n, count) // check for next row
 
       // if reached to following line it means that place is not appropriate
       column[j] = digonal1[i + j] = digonal2[i - j + n - 1] = 0;  // Backtracking
@@ -35,7 +35,7 @@ int main(){
   // no of queens;
   int n;
   cin >> n;
-  int count, start;
+  int count = 0;
   solveNQueenProblem(start = 0,n, count = 0);
 
   cout << count << "\n";
