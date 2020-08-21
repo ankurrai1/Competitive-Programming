@@ -14,7 +14,7 @@ int get_peak(vector<int>);
 // our goal is that we
 
 
-// this in the case of sorted arrays
+// this in the case of sorted arrays otherwise question will be find a peek in array any peak;
 int get_peak(int arr[],int start,int end, int n);
 
 int main(){
