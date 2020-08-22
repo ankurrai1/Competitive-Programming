@@ -40,9 +40,7 @@ int main()
 
     // no is odd then its not possible to half it
     if(n & 1) cout << "NO"<<"\n";
-    else{
-      generateSets(n);
-    }
+    else generateSets(n);
 
     return 0;
 }
