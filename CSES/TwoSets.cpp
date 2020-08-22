@@ -2,7 +2,7 @@
 using namespace std;
 
 void generateSets(int n){
-  
+
   cout << "YES" << "\n";
 
   vector<int> set2;
@@ -31,6 +31,7 @@ void generateSets(int n){
 
 int main()
 {
+  // fast io 
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
