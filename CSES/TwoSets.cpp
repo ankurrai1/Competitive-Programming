@@ -31,12 +31,14 @@ void generateSets(int n){
 
 int main()
 {
-  // fast io 
+  // fast io
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
     int n, half;
     cin >> n;
+
+    // no is odd then its not possible to half it
     if(n & 1){
       cout << "NO"<<"\n";
     }
