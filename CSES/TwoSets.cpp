@@ -2,7 +2,9 @@
 using namespace std;
 
 void generateSets(int n){
+  
   cout << "YES" << "\n";
+
   vector<int> set2;
   unordered_map<int, int> set1;
 
