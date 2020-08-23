@@ -40,7 +40,6 @@ void generateSets(ll n){
 
 }
 
-
 int main()
 {
   // fast io
