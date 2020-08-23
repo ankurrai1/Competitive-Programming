@@ -19,9 +19,17 @@ void merge(int arr[], int s, int m, int e){
 
 int mergeSort(int arr[], int s, int e){
   if(s < e){
+    
+    // finding mid pointof current array to make part
     int mid = (s + e) / 2;
+
+    // left half of current array
     mergeSort(arr, s, mid );
+
+    // right half of current array
     mergeSort(arr, mid + 1, e);
+
+    // after partition merge routine
     merge(arr, s, mid, e);
   }
 
