@@ -2,6 +2,10 @@
 
 using namespace std;
 
+// Time complexity will be O(nlogn)  T(n) = 2T(n / 2) + Cn
+// Space complexity will be O(n) it is required to store the temp array at max will be full array
+
+
 void merge(int arr[], int s, int m, int e){
   // created pointers p1 and p2 and a counter to keep track of temp array
     int p1 = s, p2 = m + 1, c = 0;
