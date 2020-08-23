@@ -3,23 +3,31 @@
 using namespace std;
 
 void merge(int arr[], int s, int m, int e){
+  // created pointers p1 and p2 and a counter to keep track of temp array
     int p1 = s, p2 = m + 1, c = 0;
+
+    // Temporary array of size of current block from s to e
     int res[e - s + 1];
 
+    // storing in res array by finding minimum element
     while(p1 <= m && p2 <= e){
         if(arr[p1] <= arr[p2]) res[c++] = arr[p1++];
         else res[c++] = arr[p2++];
     }
 
+    // flushing up if someting left upto m in case when right part is larger then left
     while(p1 <= m) res[c++] = arr[p1++];
+
+    // flushing up if someting left upto e in case when left part is larger then right part
     while(p2 <= e) res[c++] = arr[p2++];
 
+    // finally replacing all in range from s to e with new sorted values from res
    for(int i = s; i <= e; i++) arr[i] = res[i - s];
 }
 
 int mergeSort(int arr[], int s, int e){
   if(s < e){
-    
+
     // finding mid pointof current array to make part
     int mid = (s + e) / 2;
 
