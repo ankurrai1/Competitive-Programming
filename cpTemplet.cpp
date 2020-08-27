@@ -1,6 +1,4 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
 #define SPEED ios::sync_with_stdio(false); cin.tie(0); cout.tie(0)
 #define fileio freopen("http://in.in", "r", stdin),freopen("out.out", "w", stdout);
