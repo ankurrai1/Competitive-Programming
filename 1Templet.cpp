@@ -21,7 +21,7 @@ typedef vector<vll> vvll;
 typedef vector<string> vs;
 
 int32_t main() {
-    // for reading input and output file
+    // for reading input and output file we are routing it to std IO;
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin) ;
     freopen("output.txt", "w", stdout) ;
