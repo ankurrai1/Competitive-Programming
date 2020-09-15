@@ -27,9 +27,9 @@ int main() {
         cout << "No";
         else if(a == 0 && b == 0 && c != 0) // if there is only 2s then itis possible
         cout << "Yes";
-        else if(a == 0 && b != 0 && c == 0)
+        else if(a == 0 && b != 0 && c == 0) // if there is only 1s then it is possible
         cout << "Yes";
-        else if( a <= (b + c + 1))
+        else if( a <= (b + c + 1)) //if it is possible we can fill alternatively the yes also
         cout << "Yes";
         else cout << "No";
     }
