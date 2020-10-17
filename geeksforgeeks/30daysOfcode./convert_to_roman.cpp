@@ -5,6 +5,10 @@
 
 // solution function is as following
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
 
 void convertToRoman(int n)
 {
