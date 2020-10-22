@@ -1,12 +1,14 @@
 #include <bits/stdc++.h>
 
-int
+int partation(int arr[],int s, int e, int k){
+    
+}
 
-int getSmallest(int arr[n], int s, int e, int k){
+int getSmallest(int arr[], int s, int e, int k){
     if(s < e){
         int pos = partation(arr, s, e, k);
         if((pos + 1) ==  k) return arr[pos];
-        enable_shared_from_this
+
     }
     
 }
