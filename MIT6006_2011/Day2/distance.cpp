@@ -16,6 +16,20 @@ void removeSpecialCharacter(string &s)
     } 
 } 
 
+int compute_inner_product(FreqMap doc1, FreqMap doc2){
+    int sum = 0;
+    for(auto ele : doc1){
+        if(doc2[ele.first]) sum += (doc1[ele.first] * doc2[ele.first]);
+    }
+    return sum;
+}
+
+double compute_distance(FreqMap doc1, FreqMap doc2){
+    auto innerProduct = compute_inner_product(doc1, doc2);
+    auto denominator = sqrt(compute_inner_product(doc1, doc1) * compute_inner_product(doc2, doc2));
+    return cos(innerProduct/denominator);
+}
+
 int main(){
 
     ios_base::sync_with_stdio(false);
@@ -47,5 +61,11 @@ int main(){
     } 
     file.close();
 
+    cout << "document distance is :" <<( compute_distance(wf1, wf2)) << endl;
+
     return 0;
 } 
+
+// it will lie between .5 to 1;
+// .5 to most of them are matching
+// near 1 all are no common match
