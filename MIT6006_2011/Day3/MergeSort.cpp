@@ -49,7 +49,7 @@ int mergeSort(int arr[], int s, int e){
 
 int main(){
   int n = 7;
-  int arr[n] = {4,5,3,3,7,1,6};
+  int arr[7] = {4,5,3,3,7,1,6};
   mergeSort(arr, 0, n-1);
   for(int i = 0; i < n; i++){
     cout << arr[i] << "  ";
