@@ -14,7 +14,6 @@ int arr[][4] = { { 10, 8, 10, 10 },
                  { 16, 17, 19,20 }
                 };
 
-
 int findpeak(int cs, int ce){
     int mid = (cs + ce) / 2;  // find mid column;
 
@@ -26,7 +25,6 @@ int findpeak(int cs, int ce){
             mi = i;
         }
     }
-
     // assume the matrix as fixed mi  arrary
 
     if(mid > 0 && arr[mi][mid] < arr[mi][mid - 1]) return findpeak(cs, mid - 1);
