@@ -11,6 +11,7 @@ using namespace std;
 //     *b = t;  
 // }  
 
+// simple functon to print array of length n;
 void printArray(int arr[], int n){
     for(int i = 0; i < n; i++){
         cout << arr[i] << " ";
@@ -18,10 +19,16 @@ void printArray(int arr[], int n){
     cout << endl;
 }
 
+// function to part array 
 int partation(int arr[],int s, int e, int k){
+
+    // following line of code is used to genrate random no in between s and e 
+    // and then we replace them with last elemetn
     srand(time(NULL));
     int random = s + rand() % (e-s);
     swap(arr[random], arr[e]);
+
+    // After swapping last with random element simpl partition as quick sort;
     int ele = arr[e];
     int j = s - 1;
     for(int i = s; i <= e - 1; i++){
@@ -41,6 +48,7 @@ int getSmallest(int arr[], int s, int e, int k, int n){
         else if(pos < n && pos > k ) return getSmallest(arr, s, pos-1, k, n);
         else if(pos >= 0 && pos < k) return getSmallest(arr, pos+1, e, k, n);
     }
+    // to handle the case when array is already sorted
     return arr[k];
 }
 
