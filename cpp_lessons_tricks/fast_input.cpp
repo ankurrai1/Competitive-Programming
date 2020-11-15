@@ -9,6 +9,7 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
     // code goes here as regular
+    int n, k;
     cin >> n >> k;
     cout << (n+k) << "\n";
     // In above line to the place of endln we should use "\n" which is way faster
