@@ -44,7 +44,6 @@ int32_t main() {
 
 }
 
-
 #include <bits/stdc++.h>
 
 using namespace std;
