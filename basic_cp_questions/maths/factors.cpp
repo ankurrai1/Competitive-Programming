@@ -2,14 +2,27 @@
 
 using namespace std;
 
-//
-void getFactors(int n){
+//this is linear complexity function 
+void getFactorslinear(int n){
     for(int i = 1; i <= n / 2; i++){
         if(n % i == 0){
             cout << i << " ";
         }
     }
     cout << n << endl;
+}
+
+// Root n complexity function
+void getFactorsSQRT(int n){
+    int i;
+    for(i = 1; i*i < n; i++){
+        if(n % i  == 0){
+            cout << i << " ";
+            cout << n/i << " ";
+        }
+    }
+    if(i * i == n) cout << i << " ";
+    cout << endl;
 }
 
 int main() {
@@ -24,7 +37,8 @@ int main() {
     while(t--){
         int n;
         cin >> n;
-        getFactors(n);
+        getFactorslinear(n);
+        getFactorsSQRT(n);
     }
 	return 0;
 }
