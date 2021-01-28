@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// you have to sort array of 1 0 and 2 
+
 void sort012(int arr[], int n)
 {
     int zero = 0, two = n-1, i = 0;
