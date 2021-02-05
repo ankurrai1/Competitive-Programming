@@ -27,4 +27,5 @@ int main(){
         if(j == noOfGames) cout << -1 <<endl;
         else cout << (j + 1)<< endl;
     }
+    
 }
