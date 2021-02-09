@@ -52,6 +52,7 @@ int getSmallest(int arr[], int s, int e, int k, int n){
     return arr[k];
 }
 
+
 int main() {
 
     #ifndef ONLINE_JUDGE
