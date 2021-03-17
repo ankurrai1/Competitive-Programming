@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void pascalTringle(int n){
+void pascalTringles(int n){
   int ar[n][n];
   for(int i = 0; i < n; i++){
     for(int j = 0; j <= i; j++){
@@ -37,7 +37,7 @@ void pascalTringle(int n){
 
 // Optamized version of code
 
-int pascalTringle(){
+int pascalTringle(int n){
   for(int i = 1; i <= n; i++){
     int c = 1;
     for(int j = 1; j <= i; j++){
