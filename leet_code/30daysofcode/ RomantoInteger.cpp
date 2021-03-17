@@ -14,3 +14,28 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
+
+class Solution {
+public:
+    int romanToInt(string s) {
+        unordered_map<char, int> keys;
+        keys['I'] = 1;
+        keys['V'] = 5;
+        keys['X'] = 10;
+        keys['L'] = 50;
+        keys['C'] = 100;
+        keys['D'] = 500;
+        keys['M'] = 1000;
+        int n = s.size();
+        int num = keys[s[n-1]] ;
+        for(int i = n-2; i >= 0; i--){
+            if(keys[s[i]] < keys[s[i + 1]]){
+                num -= keys[s[i]];
+            }
+            else num += keys[s[i]];
+        }
+        return num;
+        
+    }
+};
