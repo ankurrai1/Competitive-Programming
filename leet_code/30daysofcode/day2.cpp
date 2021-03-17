@@ -4,6 +4,9 @@
 
 // solution function
 
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     int numJewelsInStones(string J, string S) {

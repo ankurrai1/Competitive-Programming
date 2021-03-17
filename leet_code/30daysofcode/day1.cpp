@@ -13,7 +13,9 @@ Implement a function to find the first bad version. You should minimize the numb
 // solution function is as following:
 
 // The API isBadVersion is defined for you.
-// bool isBadVersion(int version);
+bool isBadVersion(int version);
+#include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
 public:
