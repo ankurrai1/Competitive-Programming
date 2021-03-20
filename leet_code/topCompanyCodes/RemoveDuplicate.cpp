@@ -8,6 +8,7 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
         int p1 = 0, p2 = 0, n = nums.size();
+        if(n <= 1) return n;
         while(p2 < n){
             if(nums[p1] != nums[p2]){
                 p1++;
@@ -15,6 +16,6 @@ public:
             }
             p2++;
         }
-        return (n >= 1 ? p1 + 1 : 0);
+        return p1 + 1;
     }
 };
