@@ -1,5 +1,3 @@
-// taks is to print factorial of given no;
-
 #include <bits/stdc++.h>
 
 
