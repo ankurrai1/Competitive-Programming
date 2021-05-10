@@ -5,6 +5,19 @@
 
 // for simplicity you can replace curr from array to string which will be more convinient
 
+void stairPath(int n, string curr){
+    if(n < 0) return;
+    if(n == 0){
+        cout << curr << " ";
+        return;
+    }
+
+    stairPath(n - 1, curr + "1");
+    stairPath(n - 2, curr + "2");
+    stairPath(n - 3, curr + "3");
+    
+}
+
 using namespace std;
 
 void Print(vector<auto> res){
