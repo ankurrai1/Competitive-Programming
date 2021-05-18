@@ -5,8 +5,8 @@ bool canPlace(vector<vector<int>> board, int row, int col){
     
     int s = board.size();
     
-    for(int i = 0; i <= max(row, col); i++){
-        if(board[row][i] == 1 || board[i][col] == 1) return false;
+    for(int i = 0; i < row; i++){
+        if(board[i][col] == 1) return false;
     }
     
     int i = row,  j = col;
@@ -33,21 +33,19 @@ void show(vector<vector<int>> board){
     }
 }
 
-bool NqueenPlacement(vector<vector<int>> board, int n, int row = 0){
+void NqueenPlacement(vector<vector<int>> board, int n, int row = 0){
     if(n == 0){
         show(board);
         cout << endl << endl;
-        return false;
+        return;
     }
     for(int i = 0; i < board.size(); i++){
         if(canPlace(board, row, i)){
             board[row][i] = 1;
-            bool nextQueen = NqueenPlacement(board, n - 1, row + 1);
-            if(nextQueen) return true;
+            NqueenPlacement(board, n - 1, row + 1);
             board[row][i] = 0;
         }
     }
-    return false;
 }
 
 int main(){
