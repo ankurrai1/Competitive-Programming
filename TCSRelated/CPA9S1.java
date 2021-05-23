@@ -96,3 +96,24 @@ class Sort implements Comparator<Antenna>{
     }
 }
 
+
+// added variation of same function for sort
+
+public static Antenna[] sortAntennaByVSWR(Antenna[] at, double VSWR){
+        List<Antenna> ar = new ArrayList<>();
+        
+        for(int i = 0; i < at.length; i++){
+            if(at[i].getAntennaVSWR() < VSWR) ar.add(at[i]);
+        }
+        
+        if(ar.size() == 0) return null;
+        
+        Collections.sort(ar, new Comparator<Antenna>(){
+            public int compare(Antenna a1, Antenna a2){
+                return Double.compare(a1.getAntennaVSWR(), a2.getAntennaVSWR());
+            };
+
+        });
+        
+        return ar.toArray(new Antenna[ar.size()]);
+     }
