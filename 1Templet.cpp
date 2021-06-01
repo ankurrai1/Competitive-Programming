@@ -61,3 +61,34 @@ int main(){
     }
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+void sortByFreq2(vector<int>& v){
+    unordered_map<int, int> count;
+    for (int i : v) count[i]++;
+    sort(v.begin(), v.end(),
+        [&count](int const& a, int const& b) {
+        if (a == b) return false;
+        if (count[a] > count[b]) return true;
+        else if (count[a] < count[b]) return false;
+        return a < b;
+    });
+}
+
+vector<vector<int>> sortMatrixByOccurrences(vector<vector<int>> m) {
+    vector<int> temp;
+    for(vector<int> row: m){
+        for(int ele :row){
+            temp.push_back(ele);
+        }
+    }
+    
+}
