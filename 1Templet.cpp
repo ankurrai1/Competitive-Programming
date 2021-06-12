@@ -49,7 +49,7 @@ int32_t main() {
 using namespace std;
 
 int main(){
-    
+
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
@@ -90,5 +90,5 @@ vector<vector<int>> sortMatrixByOccurrences(vector<vector<int>> m) {
             temp.push_back(ele);
         }
     }
-    
+
 }
