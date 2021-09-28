@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//Ternery search using recursion
+
+
 void hollowRectangularPattern(int row, int col){
     for(int i = 0; i < row; i++){
         cout << " * ";
