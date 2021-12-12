@@ -20,6 +20,13 @@ void benjaminBulb(int n){
     }
 }
 
+//Better solution
+void benjaminBulb(int n){
+    for(int i = 1; i*i <= n; i++){
+        cout << (i * i) << endl;
+    }
+}
+
 int main(){
     int num;
     cin >> num;
