@@ -23,12 +23,8 @@ int main(){
 
   vector<int> items = {2,3,7,8,10};
 
-  for(int i = 0; i < n + 1; i++){
-    for(int j = 0; j < targetSum + 1; j++){
-      DP[i][j] = -1;
-    }
-    cout << endl;
-  }
+
+  memset(DP, -1, sizeof(DP)); // to set all values as -1;
 
   if (getElementsCombinationsForSum(n, targetSum, items)) cout << "YES " << endl;
   else cout << "NO" << endl;
