@@ -31,7 +31,8 @@ int main(){
 
   for(int i = 0; i < n + 1; i++){
     for(int j = 0; j < targetSum + 1; j++){
-      cout << DP[i][j] << "   ";
+      if(DP[i][j] >= 0) cout << " " << DP[i][j] << "   ";
+      else cout << DP[i][j] << "   ";
     }
     cout << endl;
   }

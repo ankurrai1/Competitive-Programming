@@ -25,8 +25,7 @@ bool getElementsCombinationsForSum(int n, int sum, vector<int> arr ){
   // To print the DP for varification
   for(int i = 0; i < n + 1; i++){
     for(int j = 0; j < sum + 1; j++){
-      if(DP[i][j] >= 0) cout << " " << DP[i][j] << "   ";
-      else cout << DP[i][j] << "   ";
+      cout << DP[i][j] << "   ";
     }
     cout << endl;
   }
