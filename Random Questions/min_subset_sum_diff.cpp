@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// exact complexity  = n + (total_sum / 2) * n * i + half_possible_sum.length
+
 
 int DP[1001][1001] = {0}; // with size of array  + 1 and targetSum + 1;
 
