@@ -24,3 +24,24 @@ public:
         return 1;
     }
 };
+
+
+
+
+
+class Solution {
+public:
+    bool check(int left, int right, string& s, bool delt){
+        if(left>right) return true;
+        if(s[left]==s[right]){
+            return check(left+1, right-1, s, delt);
+        }
+        else if(!delt){
+            return check(left+1, right, s, !delt) || check(left, right-1, s, !delt);
+        }
+        return false;
+    }
+    bool validPalindrome(string s) {
+        return check(0, s.size()-1, s, false);
+    }
+};
