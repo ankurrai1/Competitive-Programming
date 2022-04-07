@@ -63,3 +63,33 @@ public:
         return result;
     }
 };
+
+
+
+// third way
+
+class Solution {
+private:
+    void findAllCombinations(vector<vector<int>> &res, vector<int> curr, int idx, int target,vector<int> candidates){
+        if(target == 0){
+            res.push_back(curr);
+            return;
+        }
+        for(int i = idx; i < candidates.size(); i++){
+            if(target < candidates[i]) continue;
+            target-=candidates[i];
+            curr.push_back(candidates[i]);
+            findAllCombinations(res, curr, i, target, candidates);
+            target+=candidates[i];
+            curr.pop_back();
+        }
+    }
+public:
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> result;
+        vector<int> curr;
+        int idx = 0;
+        findAllCombinations(result, curr, idx, target, candidates);
+        return result;
+    }
+};
