@@ -11,7 +11,7 @@ void printPermutations(string str, int n, int idx){
   for (int i = idx; i < n; i++) {
     swap(str[i], str[idx]);
     printPermutations(str, n, idx+1);
-    swap(str[i], str[idx]);
+    swap(str[i], str[idx]); // without this it will work but if asked to have order it will fail
   }
 }
 
