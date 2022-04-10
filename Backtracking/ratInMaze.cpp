@@ -1,6 +1,38 @@
+// improved Solution codevise
 
+class Solution{
+    void findPossiblePaths(vector<vector<int>> m, vector<vector<int>> v, vector<string> &paths, string cPath,
+                           vector<int> rMoves, vector<int> cMoves, int r, int c, int n){
+      if(r == n-1 && c == n-1){
+        paths.push_back(cPath);
+        return;
+      }
+      string dir = "DLRU";
+      for(int i = 0; i < 4; i++){
+        int nextr = r + rMoves[i];
+        int nextc = c + cMoves[i];
+        if(nextr < 0 || nextc < 0 || nextr >= n || nextc >= n || v[nextr][nextc] || !m[nextr][nextc] ) continue;
+        v[r][c] = 1;
+        findPossiblePaths(m, v, paths, cPath + dir[i], rMoves, cMoves, nextr,  nextc,  n);
+        v[r][c] = 0;
+      }
 
-
+    }
+    public:
+    vector<string> findPath(vector<vector<int>> &m, int n) {
+        vector<string> paths;
+        string currentPath = "";
+        vector<int> v(n,0);
+        vector<int> rm = {1,  0, 0, -1};
+        vector<int> cm = {0, -1, 1,  0};
+        vector<vector<int>> visited(n, v);
+        int r = 0 , c = 0;
+        if(m[r][c] == 0 || m[n-1][n-1] == 0) return paths;
+        findPossiblePaths(m, visited, paths, currentPath, rm, cm, r,  c,  n);
+        sort(paths.begin(), paths.end());
+        return paths;
+    }
+};
 
 
 
