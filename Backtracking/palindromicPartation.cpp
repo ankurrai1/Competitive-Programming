@@ -1,26 +1,24 @@
 class Solution {
 public:
 
-    bool pailndrom(string str){
+    bool isPalindrome(string &str){
         int i = 0; int n = str.size() -1;
         while(i <= n){
-            if(str[i] == str[n]){
-                i++, n--;
-            }
-            else return false ;
+            if(str[i++] != str[n--]) return false ;
         }
         return true;
     }
 
-    void findPalindromes(vector<vector<string>> &res, string s, vector<string> curr, int idx){
-        if(idx == s.size()){
+    void findPartitions(vector<vector<string>> &res, string &s, vector<string> &curr, int idx){
+        int n = s.size();
+        if(idx == n){
             res.push_back(curr);
             return;
         }
-        for(int i = idx; i < s.size(); i++){
-            string csubStr = s.substr(idx, i - idx + 1);
-            if(pailndrom(csubStr)){
-                curr.push_back(csubStr);
+        for(int i = idx; i < n; i++){
+            string partStr = s.substr(idx, i - idx + 1);
+            if(isPalindrome(partStr)){
+                curr.push_back(partStr);
                 findPalindromes(res, s, curr, i+1);
                 curr.pop_back();
             }
