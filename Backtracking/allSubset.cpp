@@ -1,7 +1,7 @@
 
 
 
-// Bit wise Solution
+// Bit wise Solution bit shift
 
 class Solution {
 public:
@@ -20,8 +20,27 @@ public:
     }
 };
 
+// subset with level and backtrcking
+class Solution {
+private:
+    void makeSubsets(vector<vector<int>> &res, vector<int> &nums, vector<int> curr, int idx){
+        res.push_back(curr);
+        for(int i = idx; i < nums.size(); i++){
+            curr.push_back(nums[i]);
+            makeSubsets(res, nums, curr, i+1);
+            curr.pop_back();
+        }
+    }
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        vector<int> curr;
+        makeSubsets(res, nums, curr, 0);
+        return res;
+    }
+};
 
-// regular solution
+// regular solution with tow way recursion
 class Solution {
 private:
     void makeSubsets(vector<vector<int>> &res, vector<int> &nums, vector<int> curr, int idx){
