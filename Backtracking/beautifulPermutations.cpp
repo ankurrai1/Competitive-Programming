@@ -5,7 +5,7 @@ private:
         return (n1 % i1 == 0 || i1 % n1 == 0 );
     }
 
-    void permute(int &res, vector<int> nums, int idx){
+    void permute(int &res, vector<int> &nums, int idx){
         if(idx == nums.size()){
             res ++;
             return;
