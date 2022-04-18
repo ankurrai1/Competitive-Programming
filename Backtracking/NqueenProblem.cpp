@@ -41,7 +41,7 @@ bool canPlaceAt(std::vector<std::vector<int>> board, int i, int j, int n){
 bool placeNqueen(std::vector<std::vector<int>> board, int idx, int n){
   if(n == idx){
     printBoard(board);
-    return false;
+    return false; // make it true if you want only one solution to print
   }
   for(int i = 0; i < n; i ++){
     if(canPlaceAt(board, idx, i, n)){
